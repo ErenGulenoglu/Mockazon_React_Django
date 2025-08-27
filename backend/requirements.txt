@@ -1,0 +1,17 @@
+asgiref
+Django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+PyJWT
+pytz
+sqlparse
+psycopg2-binary
+python-dotenv
+
+# Recommended extras
+Pillow
+django-filter
+stripe
+boto3
+drf-yasg

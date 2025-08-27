@@ -1,0 +1,8 @@
+myenv\Scripts\activate
+pip install -r requirements.txt
+
+In deployment, DATABASES in settings.py need to be adjusted
+
+Last:
+start Auth in frontend
+user registration is completed, now go to creating frontend login logout

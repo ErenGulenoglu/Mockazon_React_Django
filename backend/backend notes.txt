@@ -1,0 +1,10 @@
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+
+superuser
+fire@gmail.com
+new_user
+1234
