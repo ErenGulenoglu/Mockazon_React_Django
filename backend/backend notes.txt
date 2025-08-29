@@ -8,3 +8,5 @@ superuser
 fire@gmail.com
 new_user
 1234
+
+../myenv\Scripts\activate
