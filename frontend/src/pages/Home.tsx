@@ -1,8 +1,8 @@
 import React from "react";
-import HorizontalNavigation from "../components/HorizontalNavigation";
+import NavigationBar from "../components/NavigationBar";
 
 function Home() {
-	return <HorizontalNavigation />;
+	return <NavigationBar />;
 }
 
 export default Home;

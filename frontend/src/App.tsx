@@ -5,6 +5,7 @@ import PublicRoute from "./components/PublicRoute";
 import Home from "./pages/Home";
 import SecurePage from "./pages/SecurePage";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 
 function Logout() {
 	localStorage.clear();
@@ -34,6 +35,7 @@ function App() {
 						}
 					/>
 					<Route path="/logout" element={<Logout />} />
+					<Route path="/*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
