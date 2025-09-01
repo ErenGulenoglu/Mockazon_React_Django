@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 # Register your models here.
 class UserAdmin(BaseUserAdmin):
     # Fields to display in the admin list view
-    list_display = ('email', 'username', 'first_name', 'last_name', 'is_staff', 'is_active', 'date_joined', 'last_login')
+    list_display = ('email', 'username', 'is_staff', 'is_active', 'date_joined', 'last_login') # 'first_name', 'last_name',
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
 
     # Make non-editable fields readonly
@@ -15,7 +15,7 @@ class UserAdmin(BaseUserAdmin):
     # Fieldsets for edit view
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal info'), {'fields': ('username', 'first_name', 'last_name', 'address', 'phone_number')}),
+        (_('Personal info'), {'fields': ('username', 'address', 'phone_number')}), # 'first_name', 'last_name',
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
     )
 

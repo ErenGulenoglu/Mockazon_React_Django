@@ -5,11 +5,12 @@ import PublicRoute from "./components/PublicRoute";
 import Home from "./pages/Home";
 import SecurePage from "./pages/SecurePage";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 
 function Logout() {
 	localStorage.clear();
-	return <Navigate to="/login" />;
+	return <Navigate to="/" />;
 }
 
 function App() {
@@ -31,6 +32,14 @@ function App() {
 						element={
 							<PublicRoute>
 								<Login />
+							</PublicRoute>
+						}
+					/>
+					<Route
+						path="/register"
+						element={
+							<PublicRoute>
+								<Register />
 							</PublicRoute>
 						}
 					/>

@@ -38,3 +38,7 @@ export function TypographyH3({ children, className }: TypographyProps) {
 export function TypographyP({ children, className }: TypographyProps) {
 	return <p className={cn("leading-7", className)}>{children}</p>;
 }
+
+export function TypographySmall({ children, className }: TypographyProps) {
+	return <small className={cn("text-sm leading-none font-medium)", className)}>{children}</small>;
+}

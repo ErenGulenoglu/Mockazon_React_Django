@@ -26,8 +26,8 @@ class CustomUserManager(BaseUserManager):
 class AbstractUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=30, unique=True)
-    first_name = models.CharField(max_length=30, blank=True)
-    last_name = models.CharField(max_length=30, blank=True)
+    # first_name = models.CharField(max_length=30, blank=True)
+    # last_name = models.CharField(max_length=30, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True)
@@ -45,5 +45,6 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
     
 class User(AbstractUser):
     # You can add more fields specific to MockAmazon, e.g., address, phone
+    username = models.CharField(max_length=30)
     address = models.TextField(blank=True)
     phone_number = models.CharField(max_length=20, blank=True)
