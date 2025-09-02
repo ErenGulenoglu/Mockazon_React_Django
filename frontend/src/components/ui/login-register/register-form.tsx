@@ -8,11 +8,11 @@ import { Spinner } from "@/components/ui/shadcn-io/spinner";
 import { TypographyP } from "../typography/Typography";
 
 import api from "@/api";
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "@/constants";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import axios, { AxiosError } from "axios";
+import { AxiosError } from "axios";
 
 interface ValidationErrors {
 	email?: string[];

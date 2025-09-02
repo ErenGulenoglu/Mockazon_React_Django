@@ -34,7 +34,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
 		} catch (error) {
 			setshowLoading(false);
 			console.error("Login failed:", error);
-			setError("Wrong username or password.");
+			setError("Wrong email or password.");
 			setHasError(true);
 		}
 	};
