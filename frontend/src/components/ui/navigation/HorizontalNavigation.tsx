@@ -17,20 +17,13 @@ function HorizontalNavigation() {
 		<NavigationMenu viewport={false}>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-					<NavigationMenuContent>
-						<NavigationMenuLink>Link</NavigationMenuLink>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-					<NavigationMenuContent>
-						<NavigationMenuLink>Link</NavigationMenuLink>
-					</NavigationMenuContent>
+					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+						<Link to="/login">Sign In</Link>
+					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link to="/login">Sign In</Link>
+						<Link to="/return-order">Returns & Orders</Link>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
