@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 function Logout() {
 	localStorage.clear();
 	return <Navigate to="/" />;
@@ -15,39 +17,41 @@ function Logout() {
 
 function App() {
 	return (
-		<div>
-			<BrowserRouter>
-				<Routes>
-					<Route
-						path="/secure-page"
-						element={
-							<ProtectedRoute>
-								<SecurePage />
-							</ProtectedRoute>
-						}
-					/>
-					<Route path="/" element={<Home />} />
-					<Route
-						path="/login"
-						element={
-							<PublicRoute>
-								<Login />
-							</PublicRoute>
-						}
-					/>
-					<Route
-						path="/register"
-						element={
-							<PublicRoute>
-								<Register />
-							</PublicRoute>
-						}
-					/>
-					<Route path="/logout" element={<Logout />} />
-					<Route path="/*" element={<NotFound />} />
-				</Routes>
-			</BrowserRouter>
-		</div>
+		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+			<div>
+				<BrowserRouter>
+					<Routes>
+						<Route
+							path="/secure-page"
+							element={
+								<ProtectedRoute>
+									<SecurePage />
+								</ProtectedRoute>
+							}
+						/>
+						<Route path="/" element={<Home />} />
+						<Route
+							path="/login"
+							element={
+								<PublicRoute>
+									<Login />
+								</PublicRoute>
+							}
+						/>
+						<Route
+							path="/register"
+							element={
+								<PublicRoute>
+									<Register />
+								</PublicRoute>
+							}
+						/>
+						<Route path="/logout" element={<Logout />} />
+						<Route path="/*" element={<NotFound />} />
+					</Routes>
+				</BrowserRouter>
+			</div>
+		</ThemeProvider>
 	);
 }
 
